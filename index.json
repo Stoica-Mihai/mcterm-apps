@@ -1,0 +1,52 @@
+{
+  "apps": {
+    "clock": {
+      "version": "0.1.0",
+      "sdk": "^1",
+      "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/clock-0.1.0.tgz",
+      "sha256": "222a670500e8f8e4cfbb7b195b68b9d0dd52216b868f7ba886b6b1dedc2b7ccb",
+      "caps": [],
+      "description": "live clock"
+    },
+    "procmon": {
+      "version": "0.1.0",
+      "sdk": "^1",
+      "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/procmon-0.1.0.tgz",
+      "sha256": "ea2775e22b0aea08975521650db5ae5e26ff48496aa4281ef3800afcbba11546",
+      "caps": [
+        "pty"
+      ],
+      "description": "live process monitor"
+    },
+    "scratch": {
+      "version": "0.1.0",
+      "sdk": "^1",
+      "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/scratch-0.1.0.tgz",
+      "sha256": "1bef4f3f262058abf1acd8eb993280a4ca59bbec805984de3d627b054922bcb6",
+      "caps": [],
+      "description": "scratch space"
+    },
+    "sysinfo": {
+      "version": "0.1.0",
+      "sdk": "^1",
+      "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/sysinfo-0.1.0.tgz",
+      "sha256": "3ed490c13fdbd0fa9ef749be867d81bfb335b54e46ace30510b7d8bc3f2edca5",
+      "caps": [
+        "pty"
+      ],
+      "description": "live system monitor"
+    },
+    "webterm": {
+      "version": "0.1.0",
+      "sdk": "^1",
+      "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/webterm-0.1.0.tgz",
+      "sha256": "b935cb4ab2a63a8e364689fe9230a432e9a4d6dd73b7293477f7e73149cb29e7",
+      "caps": [
+        "serve",
+        "clipboard",
+        "relay"
+      ],
+      "description": "terminal in your browser"
+    }
+  }
+}
