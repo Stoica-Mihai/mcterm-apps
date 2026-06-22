@@ -20,9 +20,9 @@ jobs:
       - run: npm ci
       - run: node scripts/build-apps.mjs
       - run: node scripts/pack-and-index.mjs
-      - name: Publish rolling release
+      - name: Publish versioned release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release delete apps --yes --cleanup-tag || true
-          gh release create apps out/*.tgz index.json --title apps --notes "rolling app bundles"
+          gh release create "apps-v${{ github.run_number }}" out/*.tgz index.json \
+            --title "apps v${{ github.run_number }}" --latest --notes "app bundles (run ${{ github.run_number }})"

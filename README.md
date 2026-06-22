@@ -21,10 +21,11 @@ apps/<id>/
 ## Publish
 
 CI (`.github/workflows/publish.yml`) runs on push to `main`: builds all apps, packs
-`<id>-<version>.tgz`, and uploads them **plus the regenerated `index.json`** as assets on the
-rolling `apps` release. CI never commits back to `main` (so the branch never diverges). mcterm
-reads `index.json` and the tarballs from the release. Bump an app's `version` in its
-`manifest.json` to ship an update.
+`<id>-<version>.tgz`, and uploads them **plus the regenerated `index.json`** as assets on a new
+versioned release `apps-v<run>` marked `--latest`. Old releases are kept (full history); CI never
+commits back to `main` (so the branch never diverges). mcterm reads everything via
+`releases/latest/download/…`, which always resolves to the newest release. Bump an app's `version`
+in its `manifest.json` to ship an update.
 
 ## Adding an app
 

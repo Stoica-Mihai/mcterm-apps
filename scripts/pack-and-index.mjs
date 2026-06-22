@@ -6,7 +6,8 @@ import crypto from 'node:crypto'
 import * as tar from 'tar'
 
 const ROOT = resolve(import.meta.dirname, '..')
-const ASSET_BASE = 'https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/'
+// latest/download always resolves to the newest release's asset (releases are kept, never overwritten)
+const ASSET_BASE = 'https://github.com/Stoica-Mihai/mcterm-apps/releases/latest/download/'
 
 export async function packAndIndex({
   appsDir = join(ROOT, 'apps'),
