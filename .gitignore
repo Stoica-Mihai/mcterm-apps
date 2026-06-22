@@ -2,3 +2,4 @@ node_modules/
 apps/*/dist/
 out/
 *.tgz
+index.json

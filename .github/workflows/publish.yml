@@ -25,13 +25,4 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release delete apps --yes --cleanup-tag || true
-          gh release create apps out/*.tgz --title apps --notes "rolling app bundles"
-      - name: Commit index.json
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          if ! git diff --quiet index.json; then
-            git add index.json
-            git commit -m "ci: regenerate index.json [skip ci]"
-            git push
-          fi
+          gh release create apps out/*.tgz index.json --title apps --notes "rolling app bundles"

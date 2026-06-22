@@ -21,9 +21,10 @@ apps/<id>/
 ## Publish
 
 CI (`.github/workflows/publish.yml`) runs on push to `main`: builds all apps, packs
-`<id>-<version>.tgz`, uploads them to the rolling `apps` release, and commits the regenerated
-`index.json`. mcterm reads `index.json` from raw.githubusercontent and downloads tarballs from the
-release. Bump an app's `version` in its `manifest.json` to ship an update.
+`<id>-<version>.tgz`, and uploads them **plus the regenerated `index.json`** as assets on the
+rolling `apps` release. CI never commits back to `main` (so the branch never diverges). mcterm
+reads `index.json` and the tarballs from the release. Bump an app's `version` in its
+`manifest.json` to ship an update.
 
 ## Adding an app
 
