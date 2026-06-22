@@ -1,0 +1,10 @@
+{
+  "id": "scratch",
+  "name": "Scratchpad",
+  "glyph": "pencil",
+  "description": "scratch space",
+  "version": "0.1.0",
+  "sdk": "^1",
+  "entry": "index.html",
+  "capabilities": []
+}

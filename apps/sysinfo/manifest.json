@@ -1,0 +1,10 @@
+{
+  "id": "sysinfo",
+  "name": "System Info",
+  "glyph": "activity",
+  "description": "live system monitor",
+  "version": "0.1.0",
+  "sdk": "^1",
+  "entry": "index.html",
+  "capabilities": ["pty"]
+}

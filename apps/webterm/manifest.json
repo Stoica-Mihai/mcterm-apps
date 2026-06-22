@@ -1,0 +1,10 @@
+{
+  "id": "webterm",
+  "name": "Web Terminal",
+  "glyph": "globe",
+  "description": "terminal in your browser",
+  "version": "0.1.0",
+  "sdk": "^1",
+  "entry": "index.html",
+  "capabilities": ["serve", "clipboard", "relay"]
+}

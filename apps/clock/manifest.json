@@ -1,0 +1,10 @@
+{
+  "id": "clock",
+  "name": "Clock",
+  "glyph": "clock",
+  "description": "live clock",
+  "version": "0.1.0",
+  "sdk": "^1",
+  "entry": "index.html",
+  "capabilities": []
+}

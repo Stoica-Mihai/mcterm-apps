@@ -1,0 +1,10 @@
+{
+  "id": "procmon",
+  "name": "Processes",
+  "glyph": "cpu",
+  "description": "live process monitor",
+  "version": "0.1.0",
+  "sdk": "^1",
+  "entry": "index.html",
+  "capabilities": ["pty"]
+}

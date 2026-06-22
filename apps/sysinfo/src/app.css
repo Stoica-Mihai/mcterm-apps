@@ -1,0 +1,11 @@
+#root { height: 100%; }
+body { font-size: clamp(10px, 1.1vw, 14px); }
+#wrap { padding: clamp(8px, 2.5vw, 28px); display: flex; flex-direction: column; gap: 6px; height: 100%; overflow: hidden; }
+.row { display: flex; gap: 10px; }
+.k { color: var(--faint); min-width: 7em; text-transform: uppercase; letter-spacing: .08em; font-size: .85em; padding-top: .15em; }
+.v { white-space: pre-wrap; word-break: break-all; }
+.v.accent { color: var(--accent); }
+#err { color: var(--bad); }
+/* Dock preview: same stat rows, tighter. */
+html[data-mcterm-preview] #wrap { padding: 10px; gap: 3px; }
+html[data-mcterm-preview] .k { min-width: 5.5em; }

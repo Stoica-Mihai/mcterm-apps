@@ -1,0 +1,59 @@
+#root, .wrap { height: 100%; }
+.wrap { display: flex; flex-direction: column; padding: 14px; gap: 12px; }
+
+.charts { display: flex; gap: 12px; flex: 0 0 auto; }
+.chart {
+  flex: 1; background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  padding: 10px 14px; display: flex; flex-direction: column; gap: 4px; min-width: 0;
+}
+.chart .lbl { font-size: 10px; letter-spacing: .14em; color: var(--faint); text-transform: uppercase; }
+.chart .val { font-size: 22px; font-weight: 700; color: var(--accent); }
+.chart .sub { font-size: 11px; color: var(--dim); }
+.chart svg { width: 100%; height: 46px; display: block; }
+
+.table { flex: 1; min-height: 0; display: flex; flex-direction: column;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.thead { display: flex; padding: 7px 12px; border-bottom: 1px solid var(--line);
+  font-size: 10px; letter-spacing: .1em; color: var(--faint); text-transform: uppercase; }
+.tbody { flex: 1; overflow-y: auto; outline: none; }
+.row { display: flex; padding: 3px 12px; font-size: 12.5px; cursor: pointer; }
+.row:hover { background: var(--panel2); }
+.row.sel { background: var(--panel3); }
+.c-pid { flex: 0 0 64px; color: var(--faint); }
+.c-cpu { flex: 0 0 70px; color: var(--accent); }
+.c-mem { flex: 0 0 70px; color: var(--info); }
+.c-cmd { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.thead .c-cpu.on, .thead .c-mem.on { color: var(--txt); }
+
+.confirm { color: var(--bad); }
+.foot { flex: 0 0 auto; color: var(--faint); font-size: 10.5px; letter-spacing: .03em; }
+.err { color: var(--bad); font-size: 12px; }
+
+.foot { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.foot .filter {
+  flex: 0 0 200px; background: var(--panel2); border: 1px solid var(--line);
+  border-radius: 6px; padding: 3px 8px; color: var(--txt); font-size: 12px; outline: none;
+}
+.foot .filter:focus { border-color: var(--accent); }
+.foot .count { color: var(--dim); font-size: 11px; }
+.foot .hint { color: var(--faint); font-size: 10.5px; margin-left: auto; }
+
+/* Dock preview: mirror the fullscreen charts (label · % · sparkline), drop the
+   process table + footer, let the two charts fill the card.
+   Height chain (html/body/#root = 100%) is REQUIRED: without it the flex column
+   isn't height-constrained to the card, so the charts overflow and the bottom-
+   anchored low-% sparkline renders below the card's clipped viewport (invisible). */
+html[data-mcterm-preview], html[data-mcterm-preview] body, html[data-mcterm-preview] #root { height: 100%; }
+html[data-mcterm-preview] body { margin: 0; overflow: hidden; }
+html[data-mcterm-preview] .table,
+html[data-mcterm-preview] .foot { display: none; }
+html[data-mcterm-preview] .wrap { padding: 9px; gap: 0; height: 100%; }
+html[data-mcterm-preview] .charts { flex: 1; gap: 7px; min-height: 0; }
+html[data-mcterm-preview] .chart { padding: 7px 9px; gap: 1px; overflow: hidden; }
+html[data-mcterm-preview] .chart .lbl { font-size: 9px; }
+html[data-mcterm-preview] .chart .val { font-size: 16px; }
+html[data-mcterm-preview] .chart .sub { font-size: 8.5px; }
+/* Sparkline fills the space under the % (no gap); thicken the stroke so it's
+   legible at card scale (the 100-unit viewBox shrinks the 1.5 stroke too thin). */
+html[data-mcterm-preview] .chart svg { flex: 1; height: auto; min-height: 18px; margin-top: 2px; }
+html[data-mcterm-preview] .chart svg path[fill="none"] { stroke-width: 2.5; }

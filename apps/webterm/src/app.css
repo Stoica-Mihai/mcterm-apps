@@ -1,0 +1,49 @@
+#root { height: 100%; }
+body { font-size: clamp(10px, 1.1vw, 14px); }
+#wrap { height: 100%; padding: clamp(10px, 3vw, 32px); display: flex; flex-direction: column; gap: 14px; overflow: auto; }
+.row { display: flex; align-items: center; gap: 12px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--faint); flex-shrink: 0; }
+.dot.on { background: var(--ok); box-shadow: 0 0 8px -1px var(--ok); }
+.dot.warn { background: var(--amber); box-shadow: 0 0 8px -1px var(--amber); }
+#state, #rstate { font-size: 1.15em; }
+button { font-size: 1em; padding: .5em 1.4em; border-radius: 8px; }
+.stop { background: transparent; color: var(--bad); border-color: var(--bad); }
+.urlrow { align-self: flex-start; }
+.url { user-select: all; cursor: text; background: var(--panel); border: 1px solid var(--line);
+  border-radius: 8px; padding: .6em .9em; color: var(--info); white-space: nowrap; }
+.copy.ok { color: var(--ok); border-color: var(--ok); }
+.meta { color: var(--faint); font-size: .9em; }
+.err { color: var(--bad); }
+.hint { color: var(--faint); font-size: .85em; }
+hr { width: 100%; border: none; border-top: 1px solid var(--line); margin: 6px 0; }
+h2 { font-size: 1em; margin: 0; color: var(--txt); }
+.cfg { display: grid; grid-template-columns: max-content 1fr; gap: 8px 12px; align-items: center; max-width: 520px; }
+.cfg label { color: var(--dim); font-size: .9em; }
+.cfg input { padding: .45em .7em; border-radius: 7px; border: 1px solid var(--line);
+  background: var(--bg2); color: var(--txt); font: inherit; }
+.ipw { position: relative; display: flex; }
+.ipw input { flex: 1; padding-right: 2.2em; }
+.eye { position: absolute; right: .35em; top: 50%; transform: translateY(-50%);
+  display: flex; align-items: center; background: none; border: none; cursor: pointer;
+  color: var(--dim); padding: 2px; }
+.eye:hover { color: var(--txt); }
+.eye svg { width: 16px; height: 16px; }
+.warn-banner { background: color-mix(in srgb, var(--bad) 14%, transparent); border: 1px solid var(--bad);
+  color: var(--bad); border-radius: 8px; padding: .6em .9em; font-size: .9em; }
+#save.ok { color: var(--ok); border-color: var(--ok); }
+.qr { background: #fff; padding: 10px; border-radius: 8px; display: inline-block; line-height: 0; }
+.qr img { display: block; image-rendering: pixelated; width: 180px; height: 180px; }
+/* Dock preview: local + remote status only; hide controls/config. */
+html[data-mcterm-preview] #btn,
+html[data-mcterm-preview] .cfg,
+html[data-mcterm-preview] #save,
+html[data-mcterm-preview] #rbtn,
+html[data-mcterm-preview] #sessrow,
+html[data-mcterm-preview] #rurlrow,
+html[data-mcterm-preview] #rqrrow,
+html[data-mcterm-preview] #ropen,
+html[data-mcterm-preview] #rcopy,
+html[data-mcterm-preview] .warn-banner,
+html[data-mcterm-preview] .hint,
+html[data-mcterm-preview] hr { display: none !important; } /* JS sets inline display on #sessrow/#rurlrow/#rwarn — need !important */
+html[data-mcterm-preview] #wrap { gap: 7px; padding: 12px; overflow: hidden; }

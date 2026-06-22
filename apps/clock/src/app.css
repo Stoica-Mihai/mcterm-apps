@@ -1,0 +1,14 @@
+#root { height: 100%; }
+#clock {
+  height: 100%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  user-select: none;
+}
+#time {
+  font-size: clamp(16px, 13vw, 160px); font-weight: 700;
+  color: var(--accent); letter-spacing: .04em;
+}
+#date {
+  margin-top: .4em; font-size: clamp(8px, 2.2vw, 24px);
+  color: var(--dim); letter-spacing: .2em; text-transform: uppercase;
+}
