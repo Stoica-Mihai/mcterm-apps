@@ -33,7 +33,8 @@ export async function packAndIndex({
     cpSync(manifestPath, join(stage, id, 'manifest.json'))
     cpSync(distDir, join(stage, id, 'dist'), { recursive: true })
     const tgz = join(outDir, `${id}-${version}.tgz`)
-    await tar.c({ gzip: true, file: tgz, cwd: stage }, [id])
+    // portable: strip mtime/uid/gid so the tarball + its sha256 are reproducible across builds
+    await tar.c({ gzip: true, portable: true, file: tgz, cwd: stage }, [id])
     rmSync(stage, { recursive: true, force: true })
     const sha256 = crypto.createHash('sha256').update(readFileSync(tgz)).digest('hex')
     apps[id] = {

@@ -4,7 +4,7 @@
       "version": "0.1.0",
       "sdk": "^1",
       "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/clock-0.1.0.tgz",
-      "sha256": "222a670500e8f8e4cfbb7b195b68b9d0dd52216b868f7ba886b6b1dedc2b7ccb",
+      "sha256": "690ad4feda250729415e7b35aca14dba5025437fe91497b61183d08cad79eba3",
       "caps": [],
       "description": "live clock"
     },
@@ -12,7 +12,7 @@
       "version": "0.1.0",
       "sdk": "^1",
       "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/procmon-0.1.0.tgz",
-      "sha256": "ea2775e22b0aea08975521650db5ae5e26ff48496aa4281ef3800afcbba11546",
+      "sha256": "27a0d90f2a7dfdf148b0763a96597ba808a33abb85a28376114075a1d34fcdb5",
       "caps": [
         "pty"
       ],
@@ -22,7 +22,7 @@
       "version": "0.1.0",
       "sdk": "^1",
       "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/scratch-0.1.0.tgz",
-      "sha256": "1bef4f3f262058abf1acd8eb993280a4ca59bbec805984de3d627b054922bcb6",
+      "sha256": "aeaff162e8e7206fef68351b43974b0ad82108b2c4e5615d1e15650bfe1d1b01",
       "caps": [],
       "description": "scratch space"
     },
@@ -30,7 +30,7 @@
       "version": "0.1.0",
       "sdk": "^1",
       "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/sysinfo-0.1.0.tgz",
-      "sha256": "3ed490c13fdbd0fa9ef749be867d81bfb335b54e46ace30510b7d8bc3f2edca5",
+      "sha256": "8ffd88bdd80b8e6a2b4acabec30ca955f19cd9292a9c907219283ea7bfcca545",
       "caps": [
         "pty"
       ],
@@ -40,7 +40,7 @@
       "version": "0.1.0",
       "sdk": "^1",
       "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/webterm-0.1.0.tgz",
-      "sha256": "b935cb4ab2a63a8e364689fe9230a432e9a4d6dd73b7293477f7e73149cb29e7",
+      "sha256": "2c5cbe5885af77424e305d9211c9f1df61be8609492fb3f9d5b2b45225cfc944",
       "caps": [
         "serve",
         "clipboard",
