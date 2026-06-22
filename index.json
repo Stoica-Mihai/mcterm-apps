@@ -2,17 +2,19 @@
   "apps": {
     "clock": {
       "version": "0.1.0",
+      "name": "Clock",
       "sdk": "^1",
       "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/clock-0.1.0.tgz",
-      "sha256": "690ad4feda250729415e7b35aca14dba5025437fe91497b61183d08cad79eba3",
+      "sha256": "3790e84df5c185533fa96f5381a56fa67bc6d83e44b2d47df1b100b7c74c9779",
       "caps": [],
       "description": "live clock"
     },
     "procmon": {
       "version": "0.1.0",
+      "name": "Processes",
       "sdk": "^1",
       "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/procmon-0.1.0.tgz",
-      "sha256": "27a0d90f2a7dfdf148b0763a96597ba808a33abb85a28376114075a1d34fcdb5",
+      "sha256": "2b2a94c55406c33a5614527140a120346c2e22a19080a4916555d61588279a6d",
       "caps": [
         "pty"
       ],
@@ -20,17 +22,19 @@
     },
     "scratch": {
       "version": "0.1.0",
+      "name": "Scratchpad",
       "sdk": "^1",
       "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/scratch-0.1.0.tgz",
-      "sha256": "aeaff162e8e7206fef68351b43974b0ad82108b2c4e5615d1e15650bfe1d1b01",
+      "sha256": "9e6c91f2f1627265e073b48433a69c94409a32fd74809c0f5ad0a80c5039fa93",
       "caps": [],
       "description": "scratch space"
     },
     "sysinfo": {
       "version": "0.1.0",
+      "name": "System Info",
       "sdk": "^1",
       "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/sysinfo-0.1.0.tgz",
-      "sha256": "8ffd88bdd80b8e6a2b4acabec30ca955f19cd9292a9c907219283ea7bfcca545",
+      "sha256": "85c332908988a7c5ba56c4c4d542f56699106febf9c3c2fb70f9351bf0c6d15a",
       "caps": [
         "pty"
       ],
@@ -38,9 +42,10 @@
     },
     "webterm": {
       "version": "0.1.0",
+      "name": "Web Terminal",
       "sdk": "^1",
       "tarball": "https://github.com/Stoica-Mihai/mcterm-apps/releases/download/apps/webterm-0.1.0.tgz",
-      "sha256": "2c5cbe5885af77424e305d9211c9f1df61be8609492fb3f9d5b2b45225cfc944",
+      "sha256": "cbdd97105733e3c757dea60359d1b2f4096be58a52c783a064bbfd00fa25cccf",
       "caps": [
         "serve",
         "clipboard",

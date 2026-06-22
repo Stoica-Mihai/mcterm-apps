@@ -20,6 +20,7 @@ test('packAndIndex packs a tarball + emits a matching index', async () => {
 
   const e = idx.apps.clock
   assert.equal(e.version, '1.0.0')
+  assert.equal(e.name, 'Clock')
   assert.equal(e.sdk, '^1')
   assert.equal(e.tarball, 'https://x/dl/clock-1.0.0.tgz')
   assert.deepEqual(e.caps, [])

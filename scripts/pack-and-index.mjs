@@ -39,6 +39,7 @@ export async function packAndIndex({
     const sha256 = crypto.createHash('sha256').update(readFileSync(tgz)).digest('hex')
     apps[id] = {
       version,
+      name: m.name || id,
       sdk: m.sdk || '^1',
       tarball: `${assetBase}${id}-${version}.tgz`,
       sha256,
